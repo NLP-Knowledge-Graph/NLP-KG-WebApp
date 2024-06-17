@@ -1,0 +1,35 @@
+# Step 1: Build the Next.js application
+FROM node:alpine as builder
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the package.json and package-lock.json files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of your application's code
+COPY . .
+
+# Build your Next.js application
+RUN npm run build
+
+# Step 2: Serve the application with Node.js
+FROM node:alpine as runner
+
+WORKDIR /app
+
+# Copy the built app from the builder stage
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/package.json ./package.json
+COPY prisma ./prisma/
+
+# Expose the port your app runs on
+EXPOSE 3000
+
+CMD ["npm", "start"]

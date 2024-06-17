@@ -1,0 +1,67 @@
+# Development
+version: "3"
+services:
+  nextjs:
+    build:
+      context: ./nextjs
+      #dockerfile: Dockerfile # Dev
+      dockerfile: Dockerfile.prod # Prod
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    env_file:
+      - ./nextjs/.env
+    volumes:
+      - ./nextjs/src:/app/src
+      - ./nextjs/public:/app/public
+      - /app/node_modules
+    depends_on:
+      - python # Comment if using different server
+      - mongodb
+  python:
+    # will build ./python/Dockerfile
+    build: ./python
+    platform: linux/amd64
+    ports:
+      - "8002:8002"
+    working_dir: /code/app
+    env_file:
+      - python/.env
+    environment:
+      - WEAVIATE_URI=http://weaviate:8080
+    volumes:
+      - ./python:/code/app
+      - ./python/data/:/code/data/
+    depends_on:
+      # if using local database
+      - weaviate
+  mongodb:
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=db
+    ports:
+      - 27017:27017
+    volumes:
+      - ~/mongo_data:/data/db
+  weaviate:
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8080"
+      - --scheme
+      - http
+    image: cr.weaviate.io/semitechnologies/weaviate:latest
+    ports:
+      - 8080:8080
+      - 50051:50051
+    restart: on-failure:0
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
+      PERSISTENCE_DATA_PATH: "/var/lib/weaviate"
+      DEFAULT_VECTORIZER_MODULE: "none"
+      ENABLE_MODULES: ""
+      CLUSTER_HOSTNAME: "node1"
