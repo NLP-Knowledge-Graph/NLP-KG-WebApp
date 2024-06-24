@@ -5,3 +5,5 @@ This repository contains the code, link to the demo video and the link to the NL
 Link to NLP-KG web application: [NLP Knowledge Graph](https://nlpkg.sebis.cit.tum.de)
 
 Link to demo video: [https://youtu.be/-F529f4hmYo](https://youtu.be/-F529f4hmYo)
+
+Paper: [https://arxiv.org/abs/2406.15294](https://arxiv.org/abs/2406.15294)  
