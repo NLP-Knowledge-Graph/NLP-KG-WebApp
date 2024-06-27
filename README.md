@@ -8,5 +8,5 @@ This repository contains the code, link to the demo video and the link to the NL
 
 📽️ Demo video: [https://youtu.be/-F529f4hmYo](https://youtu.be/-F529f4hmYo)
 
-🤗 NLP Survey Paper Classifier: [https://huggingface.co/TimSchopf/nlp_taxonomy_classifier](https://huggingface.co/TimSchopf/nlp_survey_classifier)
+🤗 NLP Survey Paper Classifier: [https://huggingface.co/TimSchopf/nlp_survey_classifier](https://huggingface.co/TimSchopf/nlp_survey_classifier)
 
