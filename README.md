@@ -10,3 +10,17 @@ This repository contains the code, link to the demo video and the link to the NL
 
 🤗 NLP Survey Paper Classifier: [https://huggingface.co/TimSchopf/nlp_survey_classifier](https://huggingface.co/TimSchopf/nlp_survey_classifier)
 
+
+## Citation information
+When citing our work in academic papers and theses, please use this BibTeX entry:
+``` 
+@misc{schopf2024nlpkgexploratorysearchscientific,
+      title={NLP-KG: A System for Exploratory Search of Scientific Literature in Natural Language Processing}, 
+      author={Tim Schopf and Florian Matthes},
+      year={2024},
+      eprint={2406.15294},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2406.15294}, 
+}
+``` 
