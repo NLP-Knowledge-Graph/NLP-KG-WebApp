@@ -1,6 +1,6 @@
 # NLP Knowledge Graph
 
-This repository contains the code, link to the demo video, and link to the NLP-KG web application for the study: *"NLP-KG: A System for Exploratory Search of Scientific Literature in Natural Language Processing"* accepted to ACL 2024 System Demonstrations.
+This repository contains the code, link to the demo video, and link to the NLP-KG web application for the study: *"NLP-KG: A System for Exploratory Search of Scientific Literature in Natural Language Processing"* published at ACL 2024 System Demonstrations.
 
 🖥️ NLP-KG web application: [https://nlpkg.sebis.cit.tum.de](https://nlpkg.sebis.cit.tum.de)
 
