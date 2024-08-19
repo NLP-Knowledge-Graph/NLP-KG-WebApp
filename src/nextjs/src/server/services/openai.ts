@@ -21,7 +21,7 @@ export const fetchOpenAI = async ({
       body: JSON.stringify({
         messages,
           max_tokens: max_tokens || 1000,
-          model: model || "gpt-4o",
+          model: model || "gpt-4o-mini",
       }),
     }
   );

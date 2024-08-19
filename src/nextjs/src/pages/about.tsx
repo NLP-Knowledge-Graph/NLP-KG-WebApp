@@ -59,7 +59,8 @@ const About = () => {
             <li><b>Advanced Filters</b> such as e.g., filtering by survey papers to get a quick overview of a specific
               field of interest.
             </li>
-            <li><b>Chat</b> using a Retrieval Augmented Generation pipeline to recommend relevant research literature
+            <li><b>Chat</b> using a Retrieval Augmented Generation (RAG) pipeline to recommend relevant research
+              literature
               and answer NLP-related user questions based on knowledge grounded in research papers.
             </li>
             <li><b>Ask This Paper</b> using an LLM and the full texts of papers to answer user questions about a
@@ -81,7 +82,7 @@ const About = () => {
     },
     {
       question: 'Which LLM do you use?',
-      answer: (<p>We use the <i>GPT-4o</i> model from OpenAI for our LLM-based features.</p>),
+      answer: (<p>We use the <i>GPT-4o mini</i> model from OpenAI for our LLM-based features.</p>),
     },
   ];
 
@@ -96,21 +97,11 @@ const About = () => {
         <section className="mb-8">
           <h1 className="text-3xl font-bold mb-4">About Us</h1>
           <p>
-            Welcome to the <b>Natural Language Processing Knowledge Graph (NLP-KG)</b>. <br />
-            This web application is designed to provide comprehensive support for researchers engaged in the
+            Welcome to the <b>Natural Language Processing Knowledge Graph (NLP-KG)</b>. <br/>
+            NLP-KG is a research project, aiming to provide comprehensive support for researchers engaged in the
             search and exploration of academic papers within the field of Natural Language Processing (NLP).
             Equipped with advanced features, this application was developed by researchers and explicitly tailored to
             the needs of the academic community.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Our Story</h2>
-          <p>
-            NLP-KG is a research project, aiming to enhance the search and exploration experience for NLP researchers.
-            We've been working with academic papers for years and felt a need for a more specialized and enhanced
-            tool.
-            To provide users with a richer set of options for their research, we decided to publish this tool.
           </p>
         </section>
 
@@ -123,12 +114,12 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {/* Researchers */}
             <div className="flex flex-col items-center">
-              <img src={TimSchopf.src} alt="Tim Schopf" className="w-32 h-32 rounded-full mb-2" />
+              <img src={TimSchopf.src} alt="Tim Schopf" className="w-32 h-32 rounded-full mb-2"/>
               <h3 className="text-l font-bold">Tim Schopf</h3>
               <p className="text-gray-700">Researcher</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src={FlorianMatthes.src} alt="Prof. Dr. Florian Matthes" className="w-32 h-32 rounded-full mb-2" />
+              <img src={FlorianMatthes.src} alt="Prof. Dr. Florian Matthes" className="w-32 h-32 rounded-full mb-2"/>
               <h3 className="text-l font-bold">Prof. Dr. Florian Matthes</h3>
               <p className="text-gray-700">Principal Investigator</p>
             </div>
@@ -136,22 +127,22 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {/* Developers */}
             <div className="flex flex-col items-center">
-              <img src={FerdyHadiwijaya.src} alt="Ferdy Hadiwijaya" className="w-32 h-32 rounded-full mb-2" />
+              <img src={FerdyHadiwijaya.src} alt="Ferdy Hadiwijaya" className="w-32 h-32 rounded-full mb-2"/>
               <h3 className="text-l font-bold">Ferdy Hadiwijaya</h3>
               <p className="text-gray-700">Developer</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src={RonaldErnst.src} alt="Ronald Ernst" className="w-32 h-32 rounded-full mb-2" />
+              <img src={RonaldErnst.src} alt="Ronald Ernst" className="w-32 h-32 rounded-full mb-2"/>
               <h3 className="text-l font-bold">Ronald Ernst</h3>
               <p className="text-gray-700">Developer</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src={PatrickKufner.src} alt="Patrick Kufner" className="w-32 h-32 rounded-full mb-2" />
+              <img src={PatrickKufner.src} alt="Patrick Kufner" className="w-32 h-32 rounded-full mb-2"/>
               <h3 className="text-l font-bold">Patrick Kufner</h3>
               <p className="text-gray-700">Developer</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src={CansuDogonay.src} alt="Cansu Doğanay" className="w-32 h-32 rounded-full mb-2" />
+              <img src={CansuDogonay.src} alt="Cansu Doğanay" className="w-32 h-32 rounded-full mb-2"/>
               <h3 className="text-l font-bold">Cansu Doğanay</h3>
               <p className="text-gray-700">Developer</p>
             </div>
@@ -162,11 +153,11 @@ const About = () => {
           <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
           <p>
             Have questions, suggestions, or just want to say hello? Feel free to contact us.
-            We appreciate your feedback and look forward to hearing from you! <br />
+            We appreciate your feedback and look forward to hearing from you! <br/>
             Create an issue on <a href="https://github.com/NLP-Knowledge-Graph/NLP-KG-WebApp" target="_blank"
-              rel="noopener noreferrer" className="text-blue-500 hover:underline">GitHub</a> or
+                                  rel="noopener noreferrer" className="text-blue-500 hover:underline">GitHub</a> or
             write an e-mail to <a href="mailto:tim.schopf@tum.de"
-              className="text-blue-500 hover:underline">tim.schopf@tum.de</a>.
+                                  className="text-blue-500 hover:underline">tim.schopf@tum.de</a>.
           </p>
         </section>
 
@@ -174,26 +165,51 @@ const About = () => {
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions (FAQs)</h2>
           <ul>
             {faqData.map((item, index) => (
-              <li key={index} className="mb-4">
-                <button
-                  onClick={() => setFaqOpen((prev) => (prev === index ? null : index))}
-                  className="bg-primary text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 p-2 w-full text-left flex items-center justify-between"
-                  aria-expanded={faqOpen === index}
-                  aria-controls={`faq-answer-${index}`}
-                >
-                  <span>{item.question}</span>
-                  <span>{faqOpen === index ? <ArrowUpIcon /> : <ArrowDownIcon />}</span>
-                </button>
+                <li key={index} className="mb-4">
+                  <button
+                      onClick={() => setFaqOpen((prev) => (prev === index ? null : index))}
+                      className="bg-primary text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 p-2 w-full text-left flex items-center justify-between"
+                      aria-expanded={faqOpen === index}
+                      aria-controls={`faq-answer-${index}`}
+                  >
+                    <span>{item.question}</span>
+                    <span>{faqOpen === index ? <ArrowUpIcon/> : <ArrowDownIcon/>}</span>
+                  </button>
 
-                {faqOpen === index && (
-                  <div id={`faq-answer-${index}`} className="bg-gray-100 p-2">
-                    <p>{item.answer}</p>
-                  </div>
-                )}
-              </li>
+                  {faqOpen === index && (
+                      <div id={`faq-answer-${index}`} className="bg-gray-100 p-2">
+                        <p>{item.answer}</p>
+                      </div>
+                  )}
+                </li>
             ))}
           </ul>
         </section>
+
+        <section>
+          <h2 className="text-2xl font-bold mb-4">Citation Information</h2>
+          <p>
+            You can find more details in our ACL 2024 Paper <a href="https://arxiv.org/abs/2406.15294" target="_blank"
+                                                               rel="noopener noreferrer"
+                                                               className="text-blue-500 hover:underline">NLP-KG: A
+            System for Exploratory Search of Scientific Literature in Natural Language Processing</a>. When citing our
+            work in academic papers and theses, please use the following BibTeX entry:
+          </p>
+          <pre className="bg-gray-100 p-4 overflow-x-auto">
+            <code className="text-sm">
+            {`@misc{schopf2024nlpkgexploratorysearchscientific,
+                    title={NLP-KG: A System for Exploratory Search of Scientific Literature in Natural Language Processing}, 
+                    author={Tim Schopf and Florian Matthes},
+                    year={2024},
+                    eprint={2406.15294},
+                    archivePrefix={arXiv},
+                    primaryClass={cs.CL},
+                    url={https://arxiv.org/abs/2406.15294}, 
+              }`}
+            </code>
+          </pre>
+        </section>
+
       </main>
     </div>
   );

@@ -325,7 +325,7 @@ const FOSPage = ({
 
           <div className="flex w-full flex-col items-center">
             <p className="mb-6 mt-8">
-              Papers released in this field over the years:
+              Papers published in this field over the years:
             </p>
             <div className="h-[30vh] w-[100%]">
               <ResponsiveContainer width="100%" height="110%">

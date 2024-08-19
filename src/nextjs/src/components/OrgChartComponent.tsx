@@ -456,7 +456,7 @@ export const OrgChartComponent = ({
                   setShowSize(!showSize);
                   chart.current.render().fit();
                 }}
-                data-tip="Change node sizes"
+                data-tip={!showSize ? "Adjust node sizes according to the number of publications" : "Set all nodes to the same size"}
               >
                 <ScalingIcon />
               </button>
