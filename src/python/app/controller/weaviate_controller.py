@@ -1,7 +1,7 @@
-from typing import Annotated, List
-from fastapi import APIRouter, BackgroundTasks, Query
+from typing import Annotated
 
 from app.services import weaviate_service, weaviate_sync_service
+from fastapi import APIRouter, BackgroundTasks, Query
 
 router = APIRouter()
 
@@ -21,7 +21,7 @@ def initiate_sync(background_tasks: BackgroundTasks):
 def get_publication(query_string: str, 
                     limit: int = 10, 
                     offset: int = 0,
-                    alpha: float = 0.8,
+                    alpha: float = 0.5,
                     field_filters: Annotated[list[str], Query()] = [], 
                     search_type: str = "default", 
                     min_date_filter: int = 1, 
