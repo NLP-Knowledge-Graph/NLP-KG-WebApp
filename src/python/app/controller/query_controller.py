@@ -12,7 +12,7 @@ def get_publication(
         offset: int = 0,
         limit: int = 10,
         n_papers_from_weaviate: int = 2000,
-        alpha: float = 0.8,
+        alpha: float = 0.5,
         field_filters: Annotated[list[str], Query()] = [],
         sort_option: str = "relevancy",
         search_type: str = "default",
