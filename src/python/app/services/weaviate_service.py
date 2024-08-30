@@ -2,9 +2,9 @@ import logging
 from typing import Any, Mapping
 
 import weaviate
-from weaviate.gql.get import HybridFusion
 from app.services import encoder_service
 from app.utils.types import Publication
+from weaviate.gql.get import HybridFusion
 
 from ..utils.env import WEAVIATE_URI
 
@@ -36,7 +36,9 @@ def health_check_weaviate() -> bool:
     return client.is_ready()
 
 
-def get_publications(query: str, limit=10, offset=0, alpha=0.8, field_filters=[], search_type: str = "default", min_date_filter=1, max_date_filter=99999, min_citation_filter=0, venue_filter=[], survey_filter: bool | None = None) -> list[Publication]:
+def get_publications(query: str, limit=10, offset=0, alpha=0.5, field_filters=[], search_type: str = "default",
+                     min_date_filter=1, max_date_filter=99999, min_citation_filter=0, venue_filter=[],
+                     survey_filter: bool | None = None) -> list[Publication]:
     """
     Offset = page * limit
     """
