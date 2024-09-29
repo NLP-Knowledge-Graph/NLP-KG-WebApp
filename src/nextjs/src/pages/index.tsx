@@ -28,17 +28,18 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon-white.ico"/>
       </Head>
           <GoogleAnalytics/>
-          {/* Banner */}
+          {/* Feedback Banner
           <div className="bg-primary text-white text-center py-2 absolute top-0 left-0 w-full z-10">
               <p>
                   Share your <a href="https://forms.gle/3AiMK9wNzPnzvvwu8" className="underline">feedback</a> for a
                   chance to win up to 100€ 🎉
               </p>
           </div>
+          */}
 
-      {/* Main Section */}
+      {/* Main Section (if Feedback Banner is used, set top-8 mt-4) */}
           <main className="flex-grow flex justify-center items-center">
-              <div className="absolute right-0 top-8 mt-4 mr-8 flex flex-row items-center gap-x-4">
+              <div className="absolute right-0 top-0 mt-0 mr-8 flex flex-row items-center gap-x-4">
           <HierarchyButton/>
           <NotificationDropdown/>
           <BookmarkListsDropdown/>
