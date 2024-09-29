@@ -39,7 +39,7 @@ const Home: NextPage = () => {
 
       {/* Main Section (if Feedback Banner is used, set top-8 mt-4) */}
           <main className="flex-grow flex justify-center items-center">
-              <div className="absolute right-0 top-0 mt-0 mr-8 flex flex-row items-center gap-x-4">
+              <div className="absolute right-0 top-0 mt-4 mr-8 flex flex-row items-center gap-x-4">
           <HierarchyButton/>
           <NotificationDropdown/>
           <BookmarkListsDropdown/>
