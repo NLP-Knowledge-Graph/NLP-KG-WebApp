@@ -1,6 +1,6 @@
 # NLP Knowledge Graph
 
-This repository contains the code, link to the demo video, and link to the NLP-KG web application for the study: *"NLP-KG: A System for Exploratory Search of Scientific Literature in Natural Language Processing"* published at ACL 2024 System Demonstrations.
+This repository contains the resources for the study *[NLP-KG: A System for Exploratory Search of Scientific Literature in Natural Language Processing](https://aclanthology.org/2024.acl-demos.13)* published at ACL 2024 System Demonstrations.
 
 🖥️ NLP-KG web application: [https://nlpkg.sebis.cit.tum.de](https://nlpkg.sebis.cit.tum.de)
 
@@ -9,6 +9,12 @@ This repository contains the code, link to the demo video, and link to the NLP-K
 📽️ Demo video: [https://youtu.be/HOUjFxDySOg](https://youtu.be/HOUjFxDySOg)
 
 🤗 NLP Survey Paper Classifier: [https://huggingface.co/TimSchopf/nlp_survey_classifier](https://huggingface.co/TimSchopf/nlp_survey_classifier)
+
+## Hierarchy of Fields of Study in NLP
+
+A machine readable version of the hierarchy of fields of study in NLP, as developed during our work on [NLP-KG](https://aclanthology.org/2024.acl-demos.13), is available in this repository as an OWL file: [https://github.com/NLP-Knowledge-Graph/NLP-KG-WebApp/blob/main/NLP-FoS-Hierarchy.owl](https://github.com/NLP-Knowledge-Graph/NLP-KG-WebApp/blob/main/NLP-FoS-Hierarchy.owl)
+
+This hierarchy is an extension of the NLP Taxonomy ([Schopf et al., 2023](https://aclanthology.org/2023.ranlp-1.111)), which is available in a machine readable format as an OWL file at: [https://github.com/sebischair/Exploring-NLP-Research](https://github.com/sebischair/Exploring-NLP-Research)
 
 
 ## Citation information
