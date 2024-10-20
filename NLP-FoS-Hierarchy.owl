@@ -629,9 +629,9 @@ first publication.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/timschopf/nlp-kgy.owl#hIndex -->
+    <!-- ttp://nlpkg.sebis.cit.tum.de/nlp-fos-hierarchy.owl#hIndex -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/timschopf/nlp-kgy.owl#hIndex">
+    <owl:DatatypeProperty rdf:about="ttp://nlpkg.sebis.cit.tum.de/nlp-fos-hierarchy.owl#hIndex">
         <rdfs:domain rdf:resource="http://nlpkg.sebis.cit.tum.de/nlp-fos-hierarchy.owl#Researcher"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">The h-index is an author-level metric that measures both the productivity and citation impact of the publications, initially used for an individual scientist or scholar. The h-index is defined as the maximum value of h such that the given author/journal has published at least h papers that have each been cited at least h times.</rdfs:comment>
@@ -640,9 +640,9 @@ first publication.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/timschopf/nlp-kgy.owl#publicationYear -->
+    <!-- ttp://nlpkg.sebis.cit.tum.de/nlp-fos-hierarchy.owl#publicationYear -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/timschopf/nlp-kgy.owl#publicationYear">
+    <owl:DatatypeProperty rdf:about="ttp://nlpkg.sebis.cit.tum.de/nlp-fos-hierarchy.owl#publicationYear">
         <rdfs:subPropertyOf rdf:resource="http://nlpkg.sebis.cit.tum.de/nlp-fos-hierarchy.owl#publicationDate"/>
         <rdfs:domain rdf:resource="http://nlpkg.sebis.cit.tum.de/nlp-fos-hierarchy.owl#Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
@@ -944,7 +944,7 @@ first publication.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/timschopf/nlp-kgy.owl#publicationYear"/>
+                <owl:onProperty rdf:resource="ttp://nlpkg.sebis.cit.tum.de/nlp-fos-hierarchy.owl#publicationYear"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -993,7 +993,7 @@ first publication.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/timschopf/nlp-kgy.owl#hIndex"/>
+                <owl:onProperty rdf:resource="ttp://nlpkg.sebis.cit.tum.de/nlp-fos-hierarchy.owl#hIndex"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
