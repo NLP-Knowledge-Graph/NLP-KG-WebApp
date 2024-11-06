@@ -1,7 +1,7 @@
 # Dockerfile for development
 
-# Use node alpine as it's a small node image
-FROM node:alpine
+# Use node 18-alpine as it's a small node image
+FROM node:18-alpine
 
 # Set the working directory inside the container
 WORKDIR /app

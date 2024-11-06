@@ -1,5 +1,5 @@
 # Step 1: Build the Next.js application
-FROM node:alpine as builder
+FROM node:18-alpine as builder
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Step 2: Serve the application with Node.js
-FROM node:alpine as runner
+FROM node:18-alpine as runner
 
 WORKDIR /app
 
