@@ -1,12 +1,13 @@
-fastapi>=0.101.1
+fastapi~=0.101.1
 uvicorn
-weaviate-client>=4.5.0
-transformers>=4.36.2
-neo4j>=5.11.0
+weaviate-client~=4.5.0
+transformers~=4.36.2
+neo4j~=5.11.0
 torch
-python-dotenv>=1.0.0
-adapters>=0.1.2
-starlette>=0.27.0
+python-dotenv~=1.0.0
+adapters~=0.1.2
+starlette~=0.27.0
+huggingface_hub~=0.25.2
 
 numpy
 pandas
