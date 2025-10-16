@@ -1,5 +1,3 @@
-from typing import Annotated
-
 from app.services import encoder_service, reranker_service
 from fastapi import APIRouter, Query
 
@@ -13,13 +11,13 @@ def get_publication(
         limit: int = 10,
         n_papers_from_weaviate: int = 2000,
         alpha: float = 0.5,
-        field_filters: Annotated[list[str], Query()] = [],
+        field_filters: list[str] = Query(default=[]),
         sort_option: str = "relevancy",
         search_type: str = "default",
         min_date_filter: int = 1, 
         max_date_filter: int = 99999, 
-        min_citation_filter: int = 0, 
-        venue_filters: Annotated[list[str], Query()] = [],
+        min_citation_filter: int = 0,
+        venue_filters: list[str] = Query(default=[]),
         survey_filter: bool | None = None,
         ):
     

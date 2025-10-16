@@ -1,5 +1,3 @@
-from typing import Annotated
-
 from app.services import weaviate_service, weaviate_sync_service
 from fastapi import APIRouter, BackgroundTasks, Query
 
@@ -22,12 +20,12 @@ def get_publication(query_string: str,
                     limit: int = 10, 
                     offset: int = 0,
                     alpha: float = 0.5,
-                    field_filters: Annotated[list[str], Query()] = [], 
+                    field_filters: list[str] = Query(default=[]),
                     search_type: str = "default", 
                     min_date_filter: int = 1, 
                     max_date_filter: int = 99999, 
-                    min_citation_filter: int = 0, 
-                    venue_filters: Annotated[list[str], Query()] = []):
+                    min_citation_filter: int = 0,
+                    venue_filters: list[str] = Query(default=[])):
     
     return weaviate_service.get_publications(
         query_string,
